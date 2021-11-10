@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Data types
+        </title>
+    </head>
+    <body>
+        <h3>Javascript Data Types</h3>
+        <h4>Example - 01</h4>
+        <p id="demo"></p>
+        <p id="demo_0"></p>
+        <h4>Dynamic variables</h4>
+        <p id="demo_1"></p>
+        <h4>Javascript Strings</h4>
+        <p id="demo_2"></p>
+        <p id="demo_3"></p>
+        <h4>Javascript Arrays</h4>
+        <p id="demo_4"></p>
+        <h4>Javascript Objects</h4>
+        <p id="demo_5"></p>
+        <h4>Javascript data types</h4>
+        <p id="demo_6"></p>
+        <script>
+            let x=4+9+"Audi";
+            document.getElementById("demo").innerHTML=x;
+            let y="BMW"+4+8;
+            document.getElementById("demo_0").innerHTML=y;
+            let a;
+            a=4;
+            a="Kevin";
+            document.getElementById("demo_1").innerHTML=a;
+            let car1="BMW m60";
+            let car2="BMW m61";
+            document.getElementById("demo_2").innerHTML=car1;
+            document.getElementById("demo_3").innerHTML=car2;
+            const cars=["Saab","Volvo","BMW"];
+            document.getElementById("demo_4").innerHTML=cars[1];
+            const person={firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+            document.getElementById("demo_5").innerHTML=person.firstName+", "+person.lastName+", "+person.age+", "+person.eyeColor;
+            document.getElementById("demo_6").innerHTML=typeof "Dinosh"+"<br>"+typeof 3+"<br>"+typeof 3.241+"<br>"+typeof 'c';
+        </script>
+    </body>
+</html>

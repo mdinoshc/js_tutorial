@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS strings
+        </title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+        <h3>Javascript strings</h3>
+        <h4>String length</h4>
+        <p id="demo"></p>
+        <button onclick="length()">find length</button>
+        <h4>Escape character</h4>
+        <p id="demo_0"></p>
+        <p id="demo_1"></p>
+        <p id="demo_2"></p>
+        <p id="demo_3"></p>
+        <h4>Strings as objects</h4>
+        <p id="demo_4"></p>
+        <p id="demo_5"></p>
+        <p id="demo_6"></p>
+        <h4>String slice method</h4>
+        <p id="demo_7"></p>
+        <p id="demo_8"></p>
+        <p id="demo_9"></p>
+        <h4>String substring method</h4>
+        <p id="demo_10"></p>
+        <h4>String substr method</h4>
+        <p id="demo_11"></p>
+        <h4>Replacing text</h4>
+        <p id="demo_12"></p>
+        <p id="demo_13"></p>
+        <h4>Converting to upper and lower cases</h4>
+        <h5>Upper case</h5>
+        <p id="demo_14"></p>
+        <h5>Lower case</h5>
+        <p id="demo_15"></p>
+        <h4>String concat method</h4>
+        <p id="demo_16"></p>
+        <p id="demo_17"></p>
+        <h4>Strings trim method</h4>
+        <p id="demo_18"></p>
+        <h4>String padding</h4>
+        <p id="demo_19"></p>
+        <p id="demo_20"></p>
+        <h4>Extracting string characters</h4>
+        <h5>charAt() method</h5>
+        <p id="demo_21"></p>
+        <h5>charCodeAt() method</h5>
+        <p id="demo_22"></p>
+        <h5>Property method</h5>
+        <p id="demo_23"></p>
+        <h4>String conversion to array</h4>
+        <p id="demo_24"></p>
+        <h4>Example</h4>
+        <p id="demo_25"></p>
+        <script>
+            let text="We are so called \"Vikings\" from the north.";
+            let text_1='It\'s alright.';
+            let txt="backslash is \\";
+            document.getElementById("demo_0").innerHTML=text;
+            document.getElementById("demo_1").innerHTML=text_1;
+            document.getElementById("demo_2").innerHTML=txt;
+            document.getElementById("demo_3").innerHTML="Hello Dinosh!";
+            let x="Dinosh";
+            let y= new String("Dinosh");
+            document.getElementById("demo_4").innerHTML=typeof x+"<br>"+typeof y;
+            document.getElementById("demo_5").innerHTML= (x==y);
+            document.getElementById("demo_6").innerHTML= (x===y);
+            let str="Apple,Banana,Kiwi";
+            document.getElementById("demo_7").innerHTML=str.slice(6,13);
+            document.getElementById("demo_8").innerHTML=str.slice(-12,-5);
+            document.getElementById("demo_9").innerHTML=str.slice(6);
+            document.getElementById("demo_10").innerHTML=str.substring(6,12);
+            document.getElementById("demo_11").innerHTML=str.substr(6,6);
+            let txt_1="Please visit Google";
+            document.getElementById("demo_12").innerHTML=txt_1.replace("Google","Apple");
+            document.getElementById("demo_13").innerHTML=txt_1.replace(/Google/i, "Huawei");
+            let txt_2="Hello SiRi";
+            document.getElementById("demo_14").innerHTML=txt_2.toUpperCase();
+            document.getElementById('demo_15').innerHTML=txt_2.toLowerCase();
+            let text01="Dinosh";
+            let text02="Chriton";
+            let text03="This"+" "+"world";
+            document.getElementById("demo_16").innerHTML=text01.concat(" ",text02);
+            document.getElementById("demo_17").innerHTML="This".concat(" ","world");
+            let txt_3=" hello   i am    dinosh from     sri lanka   ";
+            document.getElementById("demo_18").innerHTML=txt_3.trim();
+            let txt_4="8";
+            document.getElementById("demo_19").innerHTML=txt_4.padStart(3,0);
+            document.getElementById("demo_20").innerHTML=txt_4.padEnd(4,0);
+            let text04="HELLO JAVASCRIPT";
+            document.getElementById("demo_21").innerHTML=text04.charAt(1);
+            document.getElementById("demo_22").innerHTML=text04.charCodeAt(1);
+            document.getElementById('demo_23').innerHTML=text04[1];
+            let txt_5="a,b,c,d,e,f";
+            const myArr=txt_5.split(",");
+            document.getElementById("demo_24").innerHTML=myArr[1];
+            let text05="Dinosh";
+            const my_arr=text05.split("");
+            text_5="";
+            for(let i=0;i<my_arr.length;i++) {
+                text_5 += my_arr[i] + "<br>"
+            }
+            document.getElementById("demo_25").innerHTML=text_5;
+        </script>
+    </body>
+</html>

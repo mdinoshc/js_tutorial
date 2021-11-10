@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Number methods JS</title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+        <h3>Javascript number methods</h3>
+        <h4>toString() method</h4>
+        <p id="demo"></p>
+        <h4>toExponential() method</h4>
+        <p id="demo1"></p>
+        <h4>toFixed() method</h4>
+        <p id="demo2"></p>
+        <h4>toPrecision() method</h4>
+        <p id="demo3"></p>
+        <h4>valueOf() method</h4>
+        <p id="demo4"></p>
+        <h4>Number() method</h4>
+        <p id="demo5"></p>
+        <h4>Number() method on dates</h4>
+        <p id="demo6"></p>
+        <h4>parseInt() method</h4>
+        <p id="demo7"></p>
+        <h4>parseFloat() method</h4>
+        <p id="demo8"></p>
+        <h4>Javascript MIN_VALUE and MAX_VALUE</h4>
+        <p id="demo9"></p>
+        <h4>Number properties can't be used on variables.</h4>
+        <p id="demo10"></p>
+        <script>
+            let x=123;
+            document.getElementById("demo").innerHTML=x.toString()+"<br>"+(123).toString()+"<br>"+(100+23).toString();
+            let y=9.656;
+            document.getElementById("demo1").innerHTML=y.toExponential(2)+"<br>"+y.toExponential(4)+"<br>"+y.toExponential(6);
+            document.getElementById("demo2").innerHTML=y.toFixed(0)+"<br>"+y.toFixed(2)+"<br>"+y.toFixed(4)+"<br>"+y.toFixed(6);
+            document.getElementById("demo3").innerHTML=y.toPrecision()+"<br>"+y.toPrecision(2)+"<br>"+y.toPrecision(4)+"<br>"+y.toPrecision(6);
+            document.getElementById("demo4").innerHTML=x.valueOf()+"<br>"+(123).valueOf()+"<br>"+(100+23).valueOf();
+            document.getElementById("demo5").innerHTML=Number(true)+"<br>"+
+            Number(false)+"<br>"+Number("10")+"<br>"+
+            Number(" 10")+"<br>"+Number("10 ")+"<br>"+
+            Number(" 10 ")+"<br>"+Number("10.33")+"<br>"+
+            Number("10,33")+"<br>"+Number("10 33")+"<br>"+
+            Number("Dinosh");
+            let x1= new Date("1970-01-01");
+            let x2= new Date("1970-01-02");
+            let x3= new Date("2017-09-03");
+            document.getElementById("demo6").innerHTML=Number(x1)+"<br>"+Number(x2)+
+            "<br>"+Number(x3);
+            document.getElementById("demo7").innerHTML=parseInt("-10")+"<br>"+
+            parseInt("-10.33")+"<br>"+parseInt("10")+"<br>"+
+            parseInt("10.33")+"<br>"+parseInt("10 20 30")+"<br>"+
+            parseInt("10 years")+"<br>"+parseInt("years 10");
+            document.getElementById("demo8").innerHTML=
+            parseFloat("10")+"<br>"+parseFloat("10.33")+"<br>"+
+            parseFloat("10 20 30")+"<br>"+parseFloat("10 years")+"<br>"+
+            parseFloat("years 10");
+            let y1=Number.MAX_VALUE;
+            let y2=Number.MIN_VALUE;
+            let y3=Number.POSITIVE_INFINITY;
+            let y3_1=1/0;
+            let y4=Number.NEGATIVE_INFINITY;
+            let y4_1=-1/0;
+            let x4=100/"Apple";
+            document.getElementById("demo9").innerHTML="Max value: "+y1+
+            "<br>"+"Min value: "+y2+"<br>"+
+            "Positive infinity: "+y3+","+y3_1+"<br>"+
+            "Negative infinity: "+y4+","+y4_1+"<br>"+
+            "Not a number: "+Number.NaN+"<br>"+
+            "Example of NaN: "+x4;
+            let y5=6;
+            document.getElementById('demo10').innerHTML=y5.MAX_VALUE;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS array methods
+        </title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+        <script src="file.js"></script>
+        <h3>Javascript Array methods</h3>
+        <h4>Converting arrays to string</h4>
+        <p id="demo"></p>
+        <h4>join() method</h4>
+        <p id="demo1"></p>
+        <h4>pop() method</h4>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <h4>push() method</h4>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <h4>shift methods</h4>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <h4>unshift method</h4>
+        <p id="demo8"></p>
+        <h4>Changing elements</h4>
+        <p id="demo9"></p>
+        <button onclick="arr_func()">Add</button>
+        <p id="demo10_arr"></p>
+        <h4>Deleting elements</h4>
+        <p id="demo11"></p>
+        <p id="demo12"></p>
+        <h4>Splicing array</h4>
+        <p id="demo13"></p>
+        <button onclick="splice()">Splice</button>
+        <p id="demo14"></p>
+        <button onclick="splice1()">Splice & Replace</button>
+        <h4>splice and remove elements</h4>
+        <p id="demo15"></p>
+        <button onclick="rem_spl()">Remove and Splice</button>
+        <h4>Merging arrays</h4>
+        <p id="demo16"></p>
+        <p id="demo17"></p>
+        <p id="demo18"></p>
+        <h4>Slicing array</h4>
+        <p id="demo19"></p>
+        <p id="demo20"></p>
+        <P id="demo21"></P>
+        <script>
+            const fruits=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo").innerHTML=fruits.toString();
+            document.getElementById("demo1").innerHTML=fruits.join(" * ");
+            const fruits1=["Banana","Orange","Apple","Mango"];
+            document.getElementById('demo2').innerHTML=fruits.pop()+
+            "<br>"+fruits.toString();
+            let x = fruits1.pop();
+            document.getElementById("demo3").innerHTML="x : "+x+
+            "<br>"+fruits1.toString();
+            document.getElementById("demo4").innerHTML=fruits.push("Grapes")+
+            "<br>"+fruits.toString();
+            let y=fruits1.push("Guava");
+            document.getElementById("demo5").innerHTML="y : "+y+
+            "<br>"+fruits1.toString();
+            const fruits2=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo6").innerHTML=fruits.shift()+
+            "<br>"+fruits.toString();
+            const fruits3=["Banana","Orange","Apple","Mango"];
+            let z=fruits3.shift();
+            document.getElementById("demo7").innerHTML="z : "+z+
+            "<br>"+fruits3.toString();
+            const fruits4=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo8").innerHTML=fruits4.unshift("lemon")+"<br>"+
+            fruits4.toString();
+            fruits[0]="Avacado";
+            document.getElementById("demo9").innerHTML="fruits[0]: "+fruits[0];
+            document.getElementById("demo10_arr").innerHTML=fruits4;
+            const fruits5=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo11").innerHTML=fruits5;
+            delete fruits5[0];
+            document.getElementById('demo12').innerHTML=fruits5[0];
+            const fruits6=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo13").innerHTML=fruits6;
+            const fruits7=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo14").innerHTML=fruits7;
+            const fruits8=["Banana","Orange","Apple","Mango"];
+            document.getElementById('demo15').innerHTML=fruits8;
+            const myGirls=["Cecilie","Lone"];
+            const myBoys=["Emil","Tobias","Linus"];
+            const myCousins=["James","Kevin","Ganesh"];
+            const myFriends=myGirls.concat(myBoys);
+            document.getElementById("demo16").innerHTML=myFriends;
+            const myOnes=myGirls.concat(myBoys,myCousins);
+            document.getElementById("demo17").innerHTML=myOnes;
+            const arr_1=["Emil","Tobias","Linus"];
+            const Child=arr_1.concat("Dinosh");
+            document.getElementById('demo18').innerHTML=Child;
+            const fruits9=["Banana","Orange","Lemon","Apple","Mango"];
+            const citrus=fruits9.slice(1);
+            const citrus1=fruits9.slice(3);
+            const citrus2=fruits9.slice(1,3);
+            document.getElementById("demo19").innerHTML=fruits9+"<br>"+citrus+
+            "<br>"+citrus1+"<br>"+citrus2;
+        </script>
+    </body>
+</html>

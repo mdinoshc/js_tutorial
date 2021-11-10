@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS numbers
+        </title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+        <h3>Javascript Numbers</h3>
+        <h4>Numbers without or with decimals</h4>
+        <p id="demo"></p>
+        <h4>Extra large and small numbers</h4>
+        <p id="demo01"></p>
+        <h4>Precision</h4>
+        <p id="demo02"></p>
+        <h4>Adding numbers and strings</h4>
+        <p id="demo03"></p>
+        <p>Mistakes</p>
+        <p id="demo04"></p>
+        <h4>Numeric strings</h4>
+        <p id="demo05"></p>
+        <h4>NaN situations</h4>
+        <p id="demo06"></p>
+        <script>
+            let x=3.14;
+            let y=4;
+            document.getElementById("demo").innerHTML=x+"<br>"+y;
+            let a=123e5;
+            let b=123e-5;
+            document.getElementById("demo01").innerHTML=a+"<br>"+b;
+            let x1=999999999999999;
+            let y1=9999999999999999;
+            let z1=0.2+0.1;
+            let x2=(0.2*10 + 0.1*10)/10;
+            document.getElementById("demo02").innerHTML=x1+"<br>"+y1+"<br>"+z1+"<br>"+x2;
+            let y2=15+20;
+            let z2="10"+"25";
+            let x3=14+"23";
+            let y3="29"+13;
+            document.getElementById("demo03").innerHTML=y2+"<br>"+z2+"<br>"+x3+"<br>"+y3;
+            let a1=20;
+            let b1=25;
+            let a2="30";
+            let c1="Answer is: "+a1+b1;
+            let c2="Answer is: "+a1+b1+a2;
+            document.getElementById("demo04").innerHTML=c1+"<br>"+c2;
+            let i="100";
+            let j="20";
+            let l=i-j;
+            let i1=100/"Apple";
+            let a3=NaN;
+            let b3=4;
+            let b_3="4";
+            let c3=a3+b3;
+            let c4=a3+b_3;
+            document.getElementById("demo05").innerHTML=i/j+"<br>"+i*j+"<br>"+i+j+"<br>"+l;
+            document.getElementById("demo06").innerHTML=200/"Apple"+"<br>"+a1/j+"<br>"+c3+"<br>"+c4;
+            isNaN(i1);
+        </script>
+    </body>
+</html>

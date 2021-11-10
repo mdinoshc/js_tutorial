@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            javascript tutorial
+        </title>
+        <script>
+            function myFunction() {
+                document.getElementById("demo04").innerHTML="Para changed.";
+            }
+        </script>
+    </head>
+    <body>
+        <script src="file.js"></script>
+        <h2><b><u>Javascript can do</u></b> </h2>
+        <p>Javascript can change HTML attr. value</p>
+        <button onclick="document.getElementById('myImage').src='/pics/pic_bulbon.gif'">Turn on the light</button>
+        <img id="myImage" src="/pics/pic_bulboff.gif" style="width: 100px;">
+        <button onclick="document.getElementById('myImage').src='/pics/pic_bulboff.gif'">Turn off the light</button>
+        <h3>Changing font</h3>
+        <p id="demo">JS can change html attribute</p>
+        <button onclick="document.getElementById('demo').style.fontSize='35px'">Click to change font</button>
+        
+        <!-- Javascript hiding elements -->
+        <h3>Hide elements</h3>
+        <p id="demo01">JS can hide elements</p>
+        <button onclick="document.getElementById('demo01').style.display='none'">Click to hide</button>
+        
+        <!-- javascript showing elements with button click -->
+        <h3>show elements</h3>
+        <p id="demo02" style="display: none;">Upcoming element</p>
+        <button onclick="document.getElementById('demo02').style.display='block'">Click to open</button>
+        
+        <!-- Javascript inside script tag -->
+        <h3>JS inside script tag</h3>
+        <p id="demo03"></p>
+        <script>
+            document.getElementById("demo03").innerHTML="JS inside javascript tag";
+        </script>
+
+        <!-- javascript in head tag -->
+        <h3>Javascript in head tag</h3>
+        <p id="demo04">A paragraph</p>
+        <button type="button" onclick="myFunction()">Change it!</button>
+
+        <!-- javascript in body tag -->
+        <h3>Javascript inside body tag</h3>
+        <p id="demo05">A body paragraph</p>
+        <button type="button" onclick="myFunc()">Change it!</button>
+        <script>
+            function myFunc() {
+                document.getElementById("demo05").innerHTML="para changed.";
+            }
+        </script>
+
+        <!-- external js script -->
+        <h3>External JS script</h3>
+        <p id="demo06">A paragraph</p>
+        <button type="button" onclick="myFunc2()">Change it!</button>
+
+        <!-- use of innerHTML property -->
+        <h3>Use of 'innerHTML' property</h3>
+        <p id="demo07"></p>
+        <script>
+            document.getElementById("demo07").innerHTML=5+6;
+        </script>
+
+        <!-- use of write property -->
+        <h3>Use of '.write' property</h3>
+        <script>
+            document.write(5+8);
+        </script>
+        <!-- <button onclick="document.write(5+8)">Get value</button> -->
+
+        <!-- use of alert method -->
+        <h3>Use of '.alert' method</h3>
+        <button onclick="myFunc3()">Show alert</button>
+        <script>
+            function myFunc3() {
+                window.alert(6+8);
+            }
+        </script>
+
+        <!-- console print method -->
+        <script>
+            console.log(7+9);
+        </script>
+
+        <!-- print method -->
+        <h3>Printing a page using JS</h3>
+        <button onclick="window.print()">print</button>
+
+        <!-- calculations using JS -->
+        <h3>Calculations using JS</h3>
+        <p id="demo08"></p>
+        <button onclick="myFunc4()">Print ans</button>
+
+        <!-- javascript statements -->
+        <h3>Javascript statements</h3>
+        <p id="demo09"></p>
+        <p id="demo10"></p>
+        <button onclick="showele()">Show text</button>
+        <script>
+            function showele() {
+                document.getElementById("demo09").innerHTML="hello dinosh";
+                document.getElementById('demo10').innerHTML="How are you?";
+            }
+        </script>
+
+        <!-- javascript literals -->
+        <h3>Javascript Literals</h3>
+        <p id="demo_1"></p>
+        <p id="demo_2"></p>
+        <script>
+            document.getElementById("demo_1").innerHTML=10.50;
+            document.getElementById("demo_2").innerHTML="Dinosh Chriton";
+        </script>
+
+        <!-- assign the values -->
+        <h3>Assigning the values</h3>
+        <p id="demo_3"></p>
+        <script>
+            let x;
+            x=6;
+            document.getElementById("demo_3").innerHTML=x;
+        </script>
+
+        <!-- operators in JS -->
+        <h3>Javascript operators</h3>
+        <p id="demo_4"></p>
+        <script>
+            document.getElementById("demo_4").innerHTML=(5+6)*10;
+        </script>
+    </body>
+</html>

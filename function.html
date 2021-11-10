@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS functions
+        </title>
+    </head>
+    <body>
+        <h3>JS functions</h3>
+        <h4>Example</h4>
+        <p id="demo"></p>
+        <h4>Example of using variables</h4>
+        <p id="demo_1"></p>
+        <p id="demo_0"></p>
+        <script>
+            function myFunction(p1,p2) {
+                return p1*p2;
+            }
+            document.getElementById("demo").innerHTML=myFunction(3,4);
+            function myFunc() {
+                let carName="Audi";
+                document.getElementById("demo_1").innerHTML=typeof carName+", "+carName;
+            }
+            myFunc();
+            document.getElementById("demo_0").innerHTML=carName;
+        </script>
+    </body>
+</html>

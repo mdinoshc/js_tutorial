@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS array iteration</title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+       <h3>Javascript array iteration</h3>
+       <h4>Array .forEach()</h4>
+       <p id="demo"></p>
+       <h4>Array .map()</h4>
+       <p id="demo1"></p>
+       <h4>Array .filter()</h4>
+       <p id="demo2"></p>
+       <h4>Array .reduce()</h4>
+       <p id="demo3"></p>
+       <p id="demo4"></p>
+       <h4>Array .reduceRight()</h4>
+       <p id="demo5"></p>
+       <h4>Array .every()</h4>
+       <p id="demo6"></p>
+       <h4>Array .some()</h4>
+       <p id="demo7"></p>
+       <h4>Array .indexOf()</h4>
+       <p id="demo8"></p>
+       <h4>Array .lastIndexOf()</h4>
+       <p id="demo9"></p>
+       <h4>Array .includes()</h4>
+       <p id="demo10"></p>
+       <h4>Array .find()</h4>
+       <p id="demo11"></p>
+       <h4>Array .findIndex()</h4>
+       <p id="demo12"></p>
+       <h4>Array .from()</h4>
+       <p id="demo13"></p>
+       <h4>Array .Keys()</h4>
+       <p id="demo14"></p>
+       <script>
+           const numbers=[45,4,9,16,25];
+           const numbers_1=[45,4,9,16,25];
+           let txt="";
+           numbers.forEach(for_each);
+           document.getElementById("demo").innerHTML=txt;
+           const numbers1=numbers.map(Map);
+           document.getElementById("demo1").innerHTML=numbers1;
+           const numbers2=numbers.filter(Filter);
+           document.getElementById("demo2").innerHTML=numbers2;
+           let sum=numbers.reduce(ReDuce);
+           document.getElementById("demo3").innerHTML=sum;
+           let sum1=numbers.reduce(ReDuce, 100);
+           document.getElementById("demo4").innerHTML=sum1;
+           let sum2=numbers.reduceRight(ReDuce);
+           document.getElementById("demo5").innerHTML=sum2;
+           let over_18=numbers.every(Filter);
+           document.getElementById("demo6").innerHTML="Is everything over 18 ? "+"<br>"+over_18;
+           let someover_18=numbers.some(Filter);
+           document.getElementById("demo7").innerHTML="Is there any element over 18 ? "+"<br>"+someover_18;
+           const fruits=["Apple","Orange","Kiwi","Mango"];
+           const fruits1=["Apple","Orange","Kiwi","Orange"];
+           let pos=fruits.indexOf("Apple")+1;
+           document.getElementById('demo8').innerHTML="Index of Apple: "+pos;
+           let pos1=fruits1.lastIndexOf("Orange")+1;
+           document.getElementById("demo9").innerHTML="Last index of Orange: "+pos1;
+           const fruits2=["Banana","Orange","Apple","Mango"];
+           let pos2=fruits2.includes("Mango");
+           document.getElementById("demo10").innerHTML="Is Mango included in fruits set ?"+"<br>"+pos2;
+           const numbers3=numbers.sort(function(a,b){return a-b});
+           let firstover_18=numbers3.find(Filter);
+           document.getElementById("demo11").innerHTML="Sorted array: "+numbers3+"<br>"+"First element over 18: "+firstover_18;
+           let first = numbers3.findIndex(Filter);
+           let first_1=numbers_1.findIndex(Filter);
+           document.getElementById("demo12").innerHTML="Index for the first value over 18: "+first+
+           "<br>"+"Index for first value over 18 in unsorted array: "+first_1;
+           const arr=Array.from("ABCDEFG");
+           document.getElementById("demo13").innerHTML=arr;
+           const keys=fruits2.keys();
+           let text="";
+           for(let x of keys) {
+                text += x + "<br>";
+            }
+           document.getElementById("demo14").innerHTML=text;
+       </script>                                    
+    </body>
+</html>

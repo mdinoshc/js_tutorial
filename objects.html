@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS objects
+        </title>
+    </head>
+    <body>
+        <h3>Javascript objects</h3>
+        <h4>Example</h4>
+        <p id="demo"></p>
+        <p id="demo_0"></p>
+        <h4>Accessing object methods</h4>
+        <p id="demo_1"></p>
+        <script>
+            const car = {type:"Fiat", model:"500", color:"white"};
+            document.getElementById("demo").innerHTML=car.type+", "+car.model+", "+car.color;
+            const person={
+                firstName:"Dinosh",
+                lastName:"Chriton",
+                id:7214
+            };
+            document.getElementById("demo_0").innerHTML=person["firstName"]+", "+person["lastName"]+", "+person["id"];
+            const person_1 = {
+                firstName_1:"Royal",
+                lastName_1:"Bankrur",
+                id_1:5567,
+                fullName: function() {
+                    return this.firstName_1+" "+this.lastName_1;
+                }
+            };
+            document.getElementById("demo_1").innerHTML=person_1.fullName();
+        </script>
+    </body>
+</html>

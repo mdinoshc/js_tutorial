@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS arrays</title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+        <h3>Javascript arrays</h3>
+        <h4>Example</h4>
+        <p id="demo_one"></p>
+        <h4>Creating elements after create an array</h4>
+        <p id="demo"></p>
+        <h4>Javascript array with "new" keyword</h4>
+        <p id="demo1"></p>
+        <h4>Accessing array elements</h4>
+        <p id="demo2"></p>
+        <h4>Changing array elements</h4>
+        <p id="demo3"></p>
+        <h4>Arrays are objects</h4>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <h4>Javascript array length</h4>
+        <p id="demo6"></p>
+        <h4>Looping array elements</h4>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <h4>Adding array elements</h4>
+        <p id="demo9"></p>
+        <button onclick="myfunc()">Add</button>
+        <h4>Adding array using length method</h4>
+        <p id="demo10"></p>
+        <button onclick="myfunc1()">Add</button>
+        <h4>Creating undefined holes</h4>
+        <p id="demo11"></p>
+        <h4>Associative arrays</h4>
+        <p id="demo12"></p>
+        <h4>Javascript  new Array()</h4>
+        <p id="demo13"></p>
+        <h4>Recognition of array</h4>
+        <p id="demo14"></p>
+        <p id="demo15"></p>
+        <p id="demo16"></p>
+        <!-- <script src="file.js"></script> -->
+        <script>
+            const cars=["Saab","Volvo","BMW"];
+            document.getElementById("demo_one").innerHTML=cars;
+            const cars_1=[];
+            cars_1[0]="Saab";
+            cars_1[1]="Volvo";
+            cars_1[2]="BMW";
+            document.getElementById("demo").innerHTML=cars_1;
+            const cars_2= new Array("Toyota","Audi","Honda");
+            document.getElementById("demo1").innerHTML=cars_2+
+            "<br>"+cars_2[0];
+            let x=cars[1];
+            document.getElementById("demo2").innerHTML=x;
+            cars[0]="Mazda";
+            document.getElementById("demo3").innerHTML=cars[0];
+            const person=["John","Doe",34];
+            document.getElementById("demo4").innerHTML=person[0]
+            +"<br>"+person;
+            const person_1={firstName:"Dinosh", lastName:"Chriton", age:24};
+            document.getElementById("demo5").innerHTML=person_1.firstName;
+            const fruits=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo6").innerHTML=fruits.length
+            +"<br>"+fruits[fruits.length-1];
+            let len=fruits.length;
+            let text="<ul>";
+                for(let i=0;i<len;i++) {
+                    text += "<li>" + fruits[i] + "</li>";
+                }
+                text += "</ul>";
+            document.getElementById('demo7').innerHTML=text;
+            fruits.forEach(myFunc);
+            text += "</ul>";
+            document.getElementById("demo8").innerHTML=text;
+            function myFunc(value) {
+                text += "<li>" + value + "</li>";
+            }
+
+            const hobbies=["coding","reading","swimming","writing"];
+            document.getElementById("demo9").innerHTML=hobbies;
+            document.getElementById("demo10").innerHTML=hobbies;
+            const friends=["Kisan","Tiyagu","Guru"];
+            friends[6]="Nasir";
+            let len1=friends.length;
+            let text_1="";
+            for(i=0;i<len1;i++) {
+                text_1 += friends[i] + "<br>";
+            }
+            document.getElementById("demo11").innerHTML=text_1;
+
+            const person_2=[];
+            person_2["firstName"]="John";
+            person_2["lastName"]="Doe";
+            person_2["age"]=34;
+            document.getElementById("demo12").innerHTML=person_2[0]+
+            " "+person_2.length+" "+person_2[2];
+
+            const marks = new Array(47,90,87);
+            const marks_1 = new Array(67);
+            document.getElementById("demo13").innerHTML=marks;
+
+            let p= typeof friends;
+            let q = typeof marks;
+            document.getElementById("demo14").innerHTML=p+", "+q;
+            document.getElementById("demo15").innerHTML="Is friends is array? "+Array.isArray(friends);
+            document.getElementById("demo16").innerHTML="Is friends is array? "+friends instanceof Array;
+        </script>
+    </body>
+</html>

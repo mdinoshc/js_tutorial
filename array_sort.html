@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS sorting array</title>
+        <script src="file.js"></script>
+    </head>
+    <body>
+        <script src="file.js"></script>
+        <h3>Javascript Array Sorting</h3>
+        <h4>Sorting an array</h4>
+        <p id="demo"></p>
+        <h4>Reversing an array</h4>
+        <p id="demo1"></p>
+        <h4>Numeric sort</h4>
+        Ascending :
+        <p id="demo2"></p>
+        Descending :
+        <p id="demo3"></p>
+        <h4>Comparing values of array</h4>
+        <p id="demo4_sortarr"></p>
+        <p id="demo5_sortarr"></p>
+        <button onclick="sort_alpha()">Sort with alphabetical</button><br><br>
+        <button onclick="sort_num()">Sort with numerically</button>
+        <h4>Sorting array in random order</h4>
+        <p id="demo6"></p>
+        <h4>Fisher yates method</h4>
+        <p id="demo7_sortarr"></p>
+        <p id="demo8_sortarr"></p>
+        <button onclick="fisher_yate()">Fisher yate sorting </button>
+        <h4>Finding highest and lowest value</h4>
+        <p id="demo11"></p>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+        <h4>math.max() method</h4>
+        <p id="demo12"></p>
+        <p id="demo13"></p>
+        <h4>math.min() method</h4>
+        <p id="demo14"></p>
+        <p id="demo15"></p>
+        <h4>methods to find max. value</h4>
+        <p id="demo16"></p>
+        <p id="demo17"></p>
+        <h4>methods to find min. value</h4>
+        <p id="demo18"></p>
+        <p id="demo19"></p>
+        <h4>Sorting array objects</h4>
+        <!-- <p id="demo20"></p> -->
+        <p id="demo20_sortarr"></p>
+        <button onclick="sort_object()">Sort objects</button>
+        <p id="demo21_sortarr"></p>
+        <button onclick="sorting()">Sort object01</button>
+        <script>
+            const fruits=["Banana","Orange","Apple","Mango"];
+            document.getElementById('demo').innerHTML=fruits+"<br>"+fruits.sort();
+            document.getElementById("demo1").innerHTML=fruits.reverse();
+            const points=[40,100,1,5,25,10];
+            document.getElementById("demo2").innerHTML=points.sort(function(a,b){return a-b});
+            document.getElementById("demo3").innerHTML=points.sort(function(a,b){return b-a});
+            document.getElementById('demo4_sortarr').innerHTML=points;
+            document.getElementById('demo5_sortarr').innerHTML=points;
+            let x=points.sort(function(a,b){return 0.5-Math.random()});
+            document.getElementById("demo6").innerHTML=x;
+            document.getElementById('demo7_sortarr').innerHTML=points;
+            document.getElementById("demo8_sortarr").innerHTML=points;
+            const points1=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo11").innerHTML=points1;
+            points1.sort(function(a,b){return b-a});
+            document.getElementById('demo9').innerHTML="Lowest value : "+points1[0];
+            document.getElementById('demo10').innerHTML="Highest value : "+points1[points1.length-1];
+            document.getElementById("demo12").innerHTML=points;
+            document.getElementById("demo13").innerHTML=myArrayMax(points);
+            document.getElementById("demo14").innerHTML=points;
+            document.getElementById("demo15").innerHTML=myArrayMin(points);
+            document.getElementById("demo16").innerHTML=points;
+            document.getElementById("demo17").innerHTML=array_max(points);
+            document.getElementById("demo18").innerHTML=points;
+            document.getElementById("demo19").innerHTML=array_min(points);
+            const cars = [
+                {
+                    type: "Volvo",
+                    year: 2016
+                },
+                {
+                    type: "Saab",
+                    year: 2001
+                },
+                {
+                    type: "BMW",
+                    year: 2010
+                }
+            ];
+            // document.getElementById("demo20").innerHTML=displayCars();
+            displayCars();
+            displayCars_1();
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS const
+        </title>
+    </head>
+    <body>
+        <h4>Changing elements in array.</h4>
+        <p id="demo"></p>
+        <h4>Changing properties of constant objects.</h4>
+        <p id="demo_1"></p>
+        <h4>Block scope const.</h4>
+        <p id="demo_2"></p>
+        <h4>const hoisting</h4>
+        <p id="demo_3"></p>
+        <p id="demo_4"></p>
+        <script>
+            const cars=["Saab","Volvo","BMW"];
+            cars[0]="Toyota";
+            cars.push("Vega");
+            document.getElementById("demo").innerHTML=cars;
+            //changing properties
+            const car={type:"Fiat", model:"500", color: "white"};
+            car.color="red";
+            car.owner="Johnson";
+            document.getElementById("demo_1").innerHTML=car.type+", "+car.color+", "+car.model+", "+car.owner;
+            const x=10;
+            {
+                const x=2;
+            }
+            document.getElementById("demo_2").innerHTML="x is "+x;
+            carName = "maseratti";
+            document.getElementById("demo_3").innerHTML = carName;
+            var carName;
+            try {
+                alert(carName);
+                const carName="Volvo";
+            }
+            catch(err) {
+                document.getElementById("demo_4").innerHTML=err;
+            }
+        </script>
+    </body>
+</html>

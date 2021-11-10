@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Operators
+        </title>
+    </head>
+    <body>
+        <h3>JS operators</h3>
+        <h4>Example - 01</h4>
+        <p id="demo"></p>
+        <h4>Assignment operators</h4>
+        <p id="demo_0"></p>
+        <h4>Concatenate strings</h4>
+        <p id="demo_1"></p>
+        <h4>string concatenation using assignment</h4>
+        <P id="demo_2"></P>
+        <p id="demo_3"></p>
+        <p id="demo_4"></p>
+        <h3>JS Arithmetic</h3>
+        <script>
+            let x=5;
+            let y=2;
+            let z=x+y;
+            document.getElementById("demo").innerHTML="x + y ="+z;
+            let a=8;
+            a+=5;
+            document.getElementById("demo_0").innerHTML="a += "+a;
+            let txt1="Dinosh";
+            let txt2="is awesome.";
+            let txt3=txt1+" "+txt2;
+            document.getElementById("demo_1").innerHTML=txt3;
+            let t1="My name is ";
+            t1+="Dinosh";
+            document.getElementById("demo_2").innerHTML=t1;
+            let b="9"+9;
+            let c="five "+5;
+            document.getElementById("demo_3").innerHTML=b;
+            document.getElementById("demo_4").innerHTML=c;
+        </script>
+    </body>
+</html>
